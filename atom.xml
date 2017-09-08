@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>北极熊</title>
+  
+  <subtitle>阳光下的北极熊</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://sunbjx.com/"/>
+  <updated>2017-09-08T19:14:50.000Z</updated>
+  <id>https://sunbjx.com/</id>
+  
+  <author>
+    <name>sunbjx</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>悟透自己</title>
+    <link href="https://sunbjx.com/2017/09/09/%E6%82%9F%E9%80%8F%E8%87%AA%E5%B7%B1/"/>
+    <id>https://sunbjx.com/2017/09/09/悟透自己/</id>
+    <published>2017-09-08T19:00:51.000Z</published>
+    <updated>2017-09-08T19:14:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;人生在世,和“自己”相处最多, 但是往往悟不透“自己”.  </p><p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;人生走上坡路时,往往把自己估计过高,似乎一切所求的东西都能唾手可得,甚至把运气和机遇也看作自己身价的一部分而喜不自胜.人在不得意时,又往往把自己估计过低,把困难和不利也看做自己的无能,以至于把安分守己,与世无争误认为有自知之明,而实际上往往被怯懦的面具窒息了自己鲜活的生命.</p><p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;悟透自己,就是正确认识自己,也就是说要做一个冷静的现实主义者,既知道自己的优势,也知道自己的不足.我们可以憧憬人生,但期望值不能过高.因为在现实中,理想总是会打折扣的.可以迎接挑战.但是必须清楚自己努力的方向.也就是说,人一旦有了自知之明,也就没有什么克服不了的困难,没有什么过不去的难关.      </p><p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;要悟透自己就要欣赏自己.无论你是一棵参天大树,还是一棵小草,无论你成为一座巍峨的高山,还是一快小小的石头,都是一种天然,都有自己存在的价值.只要你认真的欣赏自己,你就会拥有一个真正的自我.只有自我欣赏才会有信心,一旦拥有了信心也就会拥有了抵御一切逆境的动力.</p><p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;要悟透自己,就要心疼自己.在气愤时心疼一下自己,找个僻静处散散心,宣泄宣泄,不要让那些无名之火伤身;忧郁时,要心疼一下自己,找三五好友,诉说诉说,让感情的阴天变晴;劳累时,你要心疼一下自己,为自己来一番问寒问暖,要明白人所拥有的不过是一个血肉之躯,经不住太多的风力霜剑;有病时,你要心疼一下自己,惟有对自己的心疼,才是战胜疾病的信心和力量.      </p><p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;悟透了自己,才能把握住自己,你生活才会有滋有味!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人生在世,和“自己”相处最多, 但是往往悟不透“自己”.  &lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人生走上坡路时,往往把自己估计过高,似乎一切所求的东西
+      
+    
+    </summary>
+    
+      <category term="ESSAYS" scheme="https://sunbjx.com/categories/ESSAYS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JDK安装配置</title>
+    <link href="https://sunbjx.com/2017/09/08/JDK%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+    <id>https://sunbjx.com/2017/09/08/JDK安装配置/</id>
+    <published>2017-09-08T11:47:55.000Z</published>
+    <updated>2017-09-08T16:52:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a><font color="red">ubuntu</font></h3><p>1、解压文件并修改文件名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo tar zxvf jdk-7u21-linux-i586.tar.gz -C /usr/lib/</div></pre></td></tr></table></figure><p>进入到安装目录中</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /usr/lib/</div></pre></td></tr></table></figure><p>修改文件名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mv jdk1.7.0_21 java</div></pre></td></tr></table></figure><p>2、添加环境变量使用vim ~/.bashrc命令编辑</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">export JAVA_HOME=/usr/lib/java</div><div class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</div><div class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</div><div class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</div></pre></td></tr></table></figure><p>3、激活环境变量</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc</div></pre></td></tr></table></figure><h3 id="centos"><a href="#centos" class="headerlink" title="centos"></a><font color="red">centos</font></h3><p>1、查看JDK信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qa | grep java</div></pre></td></tr></table></figure><p>2、卸载OpenJDK——在 步骤 1中 复制所有的 openjdk卸载</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -e --nodeps java-1.7.0-openjdk-headless-1.7.0.71-2.5.3.1.el7_0.x86_64</div></pre></td></tr></table></figure><p>3、安装jdk</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo tar -zxvf yourjdk.tar.gz -C /usr/lib</div></pre></td></tr></table></figure><p>4、配置JDK环境变量</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">export JAVA_HOME=/usr/lib/jdk1.8.0_92</div><div class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</div><div class="line">export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</div><div class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</div></pre></td></tr></table></figure><p>5、为了使编译生效</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure><p>6、查看path值</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo $PATH</div></pre></td></tr></table></figure><h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a><font color="red">Mac</font></h3><p>官网下载dmg版本安装后配置环境如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim ~/.bash_profile</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;ubuntu&quot;&gt;&lt;a href=&quot;#ubuntu&quot; class=&quot;headerlink&quot; title=&quot;ubuntu&quot;&gt;&lt;/a&gt;&lt;font color=&quot;red&quot;&gt;ubuntu&lt;/font&gt;&lt;/h3&gt;&lt;p&gt;1、解压文件并修改文件名&lt;/p&gt;
+&lt;figure clas
+      
+    
+    </summary>
+    
+      <category term="JAVA" scheme="https://sunbjx.com/categories/JAVA/"/>
+    
+      <category term="config" scheme="https://sunbjx.com/categories/JAVA/config/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://sunbjx.com/2017/09/07/hello-world/"/>
+    <id>https://sunbjx.com/2017/09/07/hello-world/</id>
+    <published>2017-09-07T07:28:33.000Z</published>
+    <updated>2017-09-07T07:28:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
