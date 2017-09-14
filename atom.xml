@@ -5,9 +5,9 @@
   <subtitle>阳光下的北极熊</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://sunbjx.com/"/>
+  <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/"/>
   <updated>2017-09-13T18:37:00.000Z</updated>
-  <id>https://sunbjx.com/</id>
+  <id>http://博客说写.我爱你/</id>
   
   <author>
     <name>sunbjx</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>在CentOS7上部署kubernetes1.7 HA 集群(Vagrant)</title>
-    <link href="https://sunbjx.com/2017/09/13/%E5%9C%A8CentOS7%E4%B8%8A%E9%83%A8%E7%BD%B2kubernetes1-7-HA-%E9%9B%86%E7%BE%A4-Vagrant/"/>
-    <id>https://sunbjx.com/2017/09/13/在CentOS7上部署kubernetes1-7-HA-集群-Vagrant/</id>
+    <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/2017/09/13/%E5%9C%A8CentOS7%E4%B8%8A%E9%83%A8%E7%BD%B2kubernetes1-7-HA-%E9%9B%86%E7%BE%A4-Vagrant/"/>
+    <id>http://博客说写.我爱你/2017/09/13/在CentOS7上部署kubernetes1-7-HA-集群-Vagrant/</id>
     <published>2017-09-13T09:43:47.000Z</published>
     <updated>2017-09-13T18:37:00.000Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="devops" scheme="https://sunbjx.com/categories/devops/"/>
+      <category term="devops" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/devops/"/>
     
-      <category term="kubernetes" scheme="https://sunbjx.com/categories/devops/kubernetes/"/>
+      <category term="kubernetes" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/devops/kubernetes/"/>
     
     
   </entry>
   
   <entry>
     <title>悟透自己</title>
-    <link href="https://sunbjx.com/2017/09/09/%E6%82%9F%E9%80%8F%E8%87%AA%E5%B7%B1/"/>
-    <id>https://sunbjx.com/2017/09/09/悟透自己/</id>
+    <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/2017/09/09/%E6%82%9F%E9%80%8F%E8%87%AA%E5%B7%B1/"/>
+    <id>http://博客说写.我爱你/2017/09/09/悟透自己/</id>
     <published>2017-09-08T19:00:51.000Z</published>
     <updated>2017-09-08T19:14:50.000Z</updated>
     
@@ -60,15 +60,15 @@
     
     </summary>
     
-      <category term="ESSAYS" scheme="https://sunbjx.com/categories/ESSAYS/"/>
+      <category term="ESSAYS" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/ESSAYS/"/>
     
     
   </entry>
   
   <entry>
     <title>JDK安装配置</title>
-    <link href="https://sunbjx.com/2017/09/08/JDK%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
-    <id>https://sunbjx.com/2017/09/08/JDK安装配置/</id>
+    <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/2017/09/08/JDK%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+    <id>http://博客说写.我爱你/2017/09/08/JDK安装配置/</id>
     <published>2017-09-08T11:47:55.000Z</published>
     <updated>2017-09-08T16:52:31.000Z</updated>
     
@@ -84,17 +84,17 @@
     
     </summary>
     
-      <category term="JAVA" scheme="https://sunbjx.com/categories/JAVA/"/>
+      <category term="JAVA" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/JAVA/"/>
     
-      <category term="config" scheme="https://sunbjx.com/categories/JAVA/config/"/>
+      <category term="config" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/JAVA/config/"/>
     
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://sunbjx.com/2017/09/07/hello-world/"/>
-    <id>https://sunbjx.com/2017/09/07/hello-world/</id>
+    <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/2017/09/07/hello-world/"/>
+    <id>http://博客说写.我爱你/2017/09/07/hello-world/</id>
     <published>2017-09-07T07:28:33.000Z</published>
     <updated>2017-09-07T07:28:33.000Z</updated>
     
