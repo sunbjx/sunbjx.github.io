@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/"/>
-  <updated>2017-09-13T18:37:00.000Z</updated>
+  <updated>2017-09-18T12:28:48.000Z</updated>
   <id>http://博客说写.我爱你/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我让自己自由了三年</title>
+    <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/2017/09/18/%E6%88%91%E8%AE%A9%E8%87%AA%E5%B7%B1%E8%87%AA%E7%94%B1%E4%BA%86%E4%B8%89%E5%B9%B4/"/>
+    <id>http://博客说写.我爱你/2017/09/18/我让自己自由了三年/</id>
+    <published>2017-09-18T12:08:23.000Z</published>
+    <updated>2017-09-18T12:28:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我让自己自由了三年-迟来的人生规划（未来的3年计划5年规划）</p><p>感觉这一刻才刚开始（毕业后的面试中总会遇到你未来的五年规划或者计划是什么？支支吾吾了下-😅 接着问到你未来三年是什么或者接下来一年是什么？接着😅）</p><p>就这样尴尬了三年（工作上一直在被动工作，学习上几乎没有，最后经历了由恋爱到寂寞与孤独）</p><p>2018-2020年 我的人生第一个三年计划<br>2021-2025年 我的人生第一个五年规划<br>2018-2020年 我要在成都在英孚把我的英语培训起来（至少要养成一个每天学英语的好习惯）；工作上我必须在devops这一块不断的夯实自己 加倍时间去完成（主打java 涉及python go js）；生活里能否找到自己心仪的适合结婚的好女孩😊；在父母的帮助下必须一定得自己去在成都按揭一套心仪的房子；车能不买就不买 买了也是吃灰😂🤦‍♂️<br>2021-2025年 在一个自己喜欢的公司把它当成自己的公司尽我所能看看我能为公司创造多大的效益并且对比一下公司为我的花费（公司地址不局限于国内😄💪）</p><p>这时候自己35岁了必须得有一个幸福的家庭（在此之前能够兼顾到并完成当然更好😂💪）；选择与能够非常非常非常信任的朋友大家一条心的去创业（产品方向能够为社会为人们带来便利与好处）or 能遇到一个理想的好平台达到和自己创业一致的能够高速高质量稳定的驶向远方 让自己对这个世界甚至这茫茫星云中了解的更多探索的更多</p><p>这一切都必须得身体健康⛽️</p><p>大叔阶段能把妹，花甲之年能抱孙子孙女，有生之年能见重孙重孙女</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—程序员也有的幸福</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我让自己自由了三年-迟来的人生规划（未来的3年计划5年规划）&lt;/p&gt;
+&lt;p&gt;感觉这一刻才刚开始（毕业后的面试中总会遇到你未来的五年规划或者计划是什么？支支吾吾了下-😅 接着问到你未来三年是什么或者接下来一年是什么？接着😅）&lt;/p&gt;
+&lt;p&gt;就这样尴尬了三年（工作上一直在被
+      
+    
+    </summary>
+    
+      <category term="规划与计划" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/%E8%A7%84%E5%88%92%E4%B8%8E%E8%AE%A1%E5%88%92/"/>
+    
+      <category term="人生规划" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/%E8%A7%84%E5%88%92%E4%B8%8E%E8%AE%A1%E5%88%92/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>在CentOS7上部署kubernetes1.7 HA 集群(Vagrant)</title>
