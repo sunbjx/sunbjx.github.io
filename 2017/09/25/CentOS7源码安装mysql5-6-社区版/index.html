@@ -97,17 +97,19 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人生在世,和“自己”相处最多, 但是往往悟不透“自己”.   &amp;emsp;&amp;emsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人生走上坡路时,往往把自己估计过高,似乎一切所求的东西都能唾手可得,甚至把运气和机遇也看作自己身价的一部分而喜不自胜.人在不得意时,又往往把自己估计过低,把困难和不利也看做自己的无能,以至于把安">
+<meta name="description" content="确认安装版本mysql分为开发版本和稳定版本（GA），开发版本拥有最新的特性，但是并不稳定，也没有完全经过测试，可能存在严重的bug，而稳定版本是经过了长时间的测试，消除了具有已知的bug，其稳定性和安全性都得到一定的保障。   对于一个mysql的版本号如：mysql-5.6.1-m1，这个版本号意味着什么呢？    对于5.6.1的解释：第一个数字5代表了文件格式，第二个数字6代表了发行级别，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="悟透自己">
-<meta property="og:url" content="http://博客说写.我爱你/2017/09/09/悟透自己/index.html">
+<meta property="og:title" content="CentOS7源码安装mysql5.6(社区版)">
+<meta property="og:url" content="http://博客说写.我爱你/2017/09/25/CentOS7源码安装mysql5-6-社区版/index.html">
 <meta property="og:site_name" content="北极熊">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人生在世,和“自己”相处最多, 但是往往悟不透“自己”.   &amp;emsp;&amp;emsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人生走上坡路时,往往把自己估计过高,似乎一切所求的东西都能唾手可得,甚至把运气和机遇也看作自己身价的一部分而喜不自胜.人在不得意时,又往往把自己估计过低,把困难和不利也看做自己的无能,以至于把安">
+<meta property="og:description" content="确认安装版本mysql分为开发版本和稳定版本（GA），开发版本拥有最新的特性，但是并不稳定，也没有完全经过测试，可能存在严重的bug，而稳定版本是经过了长时间的测试，消除了具有已知的bug，其稳定性和安全性都得到一定的保障。   对于一个mysql的版本号如：mysql-5.6.1-m1，这个版本号意味着什么呢？    对于5.6.1的解释：第一个数字5代表了文件格式，第二个数字6代表了发行级别，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-08T19:14:50.000Z">
+<meta property="og:image" content="http://xn--g7qp6bzznzj6c.xn--6qq986b3xl/2017/09/25/CentOS7源码安装mysql5-6-社区版/download_mysql.png">
+<meta property="og:updated_time" content="2017-09-25T13:12:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="悟透自己">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人生在世,和“自己”相处最多, 但是往往悟不透“自己”.   &amp;emsp;&amp;emsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;人生走上坡路时,往往把自己估计过高,似乎一切所求的东西都能唾手可得,甚至把运气和机遇也看作自己身价的一部分而喜不自胜.人在不得意时,又往往把自己估计过低,把困难和不利也看做自己的无能,以至于把安">
+<meta name="twitter:title" content="CentOS7源码安装mysql5.6(社区版)">
+<meta name="twitter:description" content="确认安装版本mysql分为开发版本和稳定版本（GA），开发版本拥有最新的特性，但是并不稳定，也没有完全经过测试，可能存在严重的bug，而稳定版本是经过了长时间的测试，消除了具有已知的bug，其稳定性和安全性都得到一定的保障。   对于一个mysql的版本号如：mysql-5.6.1-m1，这个版本号意味着什么呢？    对于5.6.1的解释：第一个数字5代表了文件格式，第二个数字6代表了发行级别，">
+<meta name="twitter:image" content="http://xn--g7qp6bzznzj6c.xn--6qq986b3xl/2017/09/25/CentOS7源码安装mysql5-6-社区版/download_mysql.png">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://博客说写.我爱你/2017/09/09/悟透自己/"/>
+  <link rel="canonical" href="http://博客说写.我爱你/2017/09/25/CentOS7源码安装mysql5-6-社区版/"/>
 
 
 
 
 
-  <title>悟透自己 | 北极熊</title>
+  <title>CentOS7源码安装mysql5.6(社区版) | 北极熊</title>
   <style>
     .forkme{
       display: none;
@@ -322,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://博客说写.我爱你/2017/09/09/悟透自己/">
+    <link itemprop="mainEntityOfPage" href="http://博客说写.我爱你/2017/09/25/CentOS7源码安装mysql5-6-社区版/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sunbjx">
@@ -339,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">悟透自己</h1>
+          <h1 class="post-title" itemprop="name headline">CentOS7源码安装mysql5.6(社区版)</h1>
         
 
         <div class="post-meta">
@@ -351,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T03:00:51+08:00">
-                2017-09-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T11:02:03+08:00">
+                2017-09-25
               </time>
             
 
@@ -374,8 +376,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ESSAYS/" itemprop="url" rel="index">
-                    <span itemprop="name">ESSAYS</span>
+                  <a href="/categories/DB/" itemprop="url" rel="index">
+                    <span itemprop="name">DB</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DB/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
                   </a>
                 </span>
 
@@ -392,9 +405,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/09/09/悟透自己/#comments" itemprop="discussionUrl">
+                <a href="/2017/09/25/CentOS7源码安装mysql5-6-社区版/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/09/悟透自己/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/09/25/CentOS7源码安装mysql5-6-社区版/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -427,12 +440,86 @@
       
 
       
-        <p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;人生在世,和“自己”相处最多, 但是往往悟不透“自己”.  </p>
-<p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;人生走上坡路时,往往把自己估计过高,似乎一切所求的东西都能唾手可得,甚至把运气和机遇也看作自己身价的一部分而喜不自胜.人在不得意时,又往往把自己估计过低,把困难和不利也看做自己的无能,以至于把安分守己,与世无争误认为有自知之明,而实际上往往被怯懦的面具窒息了自己鲜活的生命.</p>
-<p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;悟透自己,就是正确认识自己,也就是说要做一个冷静的现实主义者,既知道自己的优势,也知道自己的不足.我们可以憧憬人生,但期望值不能过高.因为在现实中,理想总是会打折扣的.可以迎接挑战.但是必须清楚自己努力的方向.也就是说,人一旦有了自知之明,也就没有什么克服不了的困难,没有什么过不去的难关.      </p>
-<p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;要悟透自己就要欣赏自己.无论你是一棵参天大树,还是一棵小草,无论你成为一座巍峨的高山,还是一快小小的石头,都是一种天然,都有自己存在的价值.只要你认真的欣赏自己,你就会拥有一个真正的自我.只有自我欣赏才会有信心,一旦拥有了信心也就会拥有了抵御一切逆境的动力.</p>
-<p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;要悟透自己,就要心疼自己.在气愤时心疼一下自己,找个僻静处散散心,宣泄宣泄,不要让那些无名之火伤身;忧郁时,要心疼一下自己,找三五好友,诉说诉说,让感情的阴天变晴;劳累时,你要心疼一下自己,为自己来一番问寒问暖,要明白人所拥有的不过是一个血肉之躯,经不住太多的风力霜剑;有病时,你要心疼一下自己,惟有对自己的心疼,才是战胜疾病的信心和力量.      </p>
-<p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;悟透了自己,才能把握住自己,你生活才会有滋有味!</p>
+        <h3 id="确认安装版本"><a href="#确认安装版本" class="headerlink" title="确认安装版本"></a>确认安装版本</h3><p>mysql分为开发版本和稳定版本（GA），开发版本拥有最新的特性，但是并不稳定，也没有完全经过测试，可能存在严重的bug，而稳定版本是经过了长时间的测试，消除了具有已知的bug，其稳定性和安全性都得到一定的保障。  </p>
+<p>对于一个mysql的版本号如：mysql-5.6.1-m1，这个版本号意味着什么呢？  </p>
+<ul>
+<li>对于5.6.1的解释：第一个数字5代表了文件格式，第二个数字6代表了发行级别，第三个数字1代表了版本号。更新幅度较小时，最后的数字会增加，出现了重大特性更新时，第二个数字会增加，文件格式改变时，第一个数字会增加   </li>
+<li>对于m1的解释：这是用来表明这个mysql版本的稳定性级别的，如果没有这个后缀，那么这个版本就是一个稳定版（GA）；如果这个后缀是mN（例如m1，m2）格式，表明了这个版本加入了一些经过彻底测试的新特性，可以认为这是一个试生产的模具；如果这个后缀是rc，表明了这是一个候选版本，已经修改了已知的重要bug，但是没有经过足够长时间的使用来确认所有的bug已经被修复。  </li>
+</ul>
+<p>一旦选择了版本号，就要选择使用哪个发行版，你可以使用二进制发行版如RPM包或Zip压缩包等，但是如果你要实现如下的功能，就要选择源码安装（本文正是选择源码安装的方式）：  </p>
+<ul>
+<li>把mysq安装到指定位置   </li>
+<li>使用mysql的一些特性（标准的二进制版本中并没有这些特性）如：TCP封包支持，调试mysql   </li>
+<li>二进制版本中默认支持所有的字符集，但你可以在编译安装源码时指定字符集，从而使得安装的mysql更小</li>
+</ul>
+<h3 id="卸载原有MySQL或者Mariadb"><a href="#卸载原有MySQL或者Mariadb" class="headerlink" title="卸载原有MySQL或者Mariadb"></a>卸载原有MySQL或者Mariadb</h3><p>CentOs7版本默认情况下安装了mariadb-libs，必须先卸载才可以继续安装MySql</p>
+<h4 id="查找以前是否安装mariadb-libs"><a href="#查找以前是否安装mariadb-libs" class="headerlink" title="查找以前是否安装mariadb-libs"></a>查找以前是否安装mariadb-libs</h4><p>如：<code>mariadb-libs-5.5.35-3.el7.x86_64</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rpm -qa | grep -i mariadb-libs</div></pre></td></tr></table></figure>
+<h4 id="卸载已经安装的mariadb-libs"><a href="#卸载已经安装的mariadb-libs" class="headerlink" title="卸载已经安装的mariadb-libs"></a>卸载已经安装的mariadb-libs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum remove mariadb-libs-5.5.35-3.el7.x86_64</div></pre></td></tr></table></figure>
+<h4 id="查找以前是否安装MySQL"><a href="#查找以前是否安装MySQL" class="headerlink" title="查找以前是否安装MySQL"></a>查找以前是否安装MySQL</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rpm -qa | grep -i mysql</div></pre></td></tr></table></figure>
+<ul>
+<li>如果显示有数据 说明已经安装了 MySQL 程序 </li>
+<li>停止mysql服务</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ service mysql stop</div></pre></td></tr></table></figure>
+<h4 id="删除之前安装的mysql"><a href="#删除之前安装的mysql" class="headerlink" title="删除之前安装的mysql"></a>删除之前安装的mysql</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ rpm -ve  文件名称   例如：MySQL-server-5.6.24-1.linux_glibc2.5.x86_64</div><div class="line">$ rpm -ve  文件名称   例如：MySQL-client-5.6.24-1.linux_glibc2.5.x86_64</div></pre></td></tr></table></figure>
+<h4 id="查找之前老版本mysql的目录、并且删除老版本mysql的文件和库"><a href="#查找之前老版本mysql的目录、并且删除老版本mysql的文件和库" class="headerlink" title="查找之前老版本mysql的目录、并且删除老版本mysql的文件和库"></a>查找之前老版本mysql的目录、并且删除老版本mysql的文件和库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find / -name mysql</div></pre></td></tr></table></figure>
+<p>如：</p>
+<p>/var/lib/mysql  </p>
+<p>/usr/lib64/mysql  </p>
+<p>/usr/local/mysql  </p>
+<p>/usr/local/mysql/data/mysql</p>
+<ul>
+<li>删除对应的目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ rm -rf /var/lib/mysql  </div><div class="line">$ rm -rf /usr/lib64/mysql  </div><div class="line">$ rm -rf /usr/local/mysql</div></pre></td></tr></table></figure>
+<ul>
+<li>删除配置文档</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rm -rf /etc/my.cnf</div></pre></td></tr></table></figure>
+<h3 id="下载MySQL"><a href="#下载MySQL" class="headerlink" title="下载MySQL"></a>下载MySQL</h3><p>下载完后需要检查文件的MD5，以确认是否从官网下载的原版本（以防被人篡改过该软件）</p>
+<p>我选择如下：<a href="https://dev.mysql.com/downloads/mysql/5.6.html#downloads" target="_blank" rel="external"><font color="red">官网地址</font></a></p>
+<p><img src="/2017/09/25/CentOS7源码安装mysql5-6-社区版/download_mysql.png" alt=""></p>
+<h3 id="编译和安装MySQL"><a href="#编译和安装MySQL" class="headerlink" title="编译和安装MySQL"></a>编译和安装MySQL</h3><h4 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ yum -y install make bison-devel ncures-devel libaio</div><div class="line">$ yum -y install libaio libaio-devel</div><div class="line">$ yum -y install perl-Data-Dumper</div><div class="line">$ yum -y install net-tools</div><div class="line">$ yum -i install bison gcc-c++ cmake ncurses</div></pre></td></tr></table></figure>
+<p>解压</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ tar -zxvf mysql-5.6.32.tar.gz</div></pre></td></tr></table></figure>
+<h4 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cmake \-DCMAKE_INSTALL_PREFIX=/usr/local/mysql56 -DMYSQL_DATADIR=/usr/local/mysql/data -DSYSCONFDIR=/etc/my.cnf  -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DMYSQL_UNIX_ADDR=/tmp/mysqld.sock -DMYSQL_TCP_PORT=3306 -DENABLED_LOCAL_INFILE=1 -DWITH_PARTITION_STORAGE_ENGINE=1 -DEXTRA_CHARSETS=all -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci</div><div class="line"></div><div class="line">$ make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"># -DCMAKE_INSTALL_PREFIX=/usr/local/mysql56  \    #安装路径  </div><div class="line">  </div><div class="line"># -DMYSQL_DATADIR=/usr/local/mysql/data      \    #数据文件存放位置  </div><div class="line">  </div><div class="line"># -DSYSCONFDIR=/etc                         \    #my.cnf路径  </div><div class="line">  </div><div class="line"># -DWITH_MYISAM_STORAGE_ENGINE=1            \    #支持MyIASM引擎  </div><div class="line">  </div><div class="line"># -DWITH_INNOBASE_STORAGE_ENGINE=1          \    #支持InnoDB引擎  </div><div class="line">  </div><div class="line"># -DWITH_MEMORY_STORAGE_ENGINE=1            \    #支持Memory引擎  </div><div class="line">  </div><div class="line"># -DWITH_READLINE=1                         \    #快捷键功能(我没用过)  </div><div class="line">  </div><div class="line"># -DMYSQL_UNIX_ADDR=/tmp/mysqld.sock        \    #连接数据库socket路径  </div><div class="line">  </div><div class="line"># -DMYSQL_TCP_PORT=3306                     \    #端口  </div><div class="line">    </div><div class="line"># -DENABLED_LOCAL_INFILE=1                  \    #允许从本地导入数据  </div><div class="line">  </div><div class="line"># -DWITH_PARTITION_STORAGE_ENGINE=1         \    #安装支持数据库分区  </div><div class="line">  </div><div class="line"># -DEXTRA_CHARSETS=all                      \    #安装所有的字符集  </div><div class="line">  </div><div class="line"># -DDEFAULT_CHARSET=utf8                    \    #默认字符  </div><div class="line">  </div><div class="line"># -DDEFAULT_COLLATION=utf8_general_ci</div></pre></td></tr></table></figure>
+<h4 id="配置MySQL"><a href="#配置MySQL" class="headerlink" title="配置MySQL"></a>配置MySQL</h4><ul>
+<li>检查系统是否已经有mysql用户，如果没有则创建</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cat /etc/passwd | grep mysql</div><div class="line">$ cat /etc/group | grep mysql</div></pre></td></tr></table></figure>
+<ul>
+<li>创建mysql用户（但是不能使用mysql账号登陆系统</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ groupadd mysql</div><div class="line">$ useradd -g -s mysql mysql</div></pre></td></tr></table></figure>
+<ul>
+<li>修改权限</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ chown -R mysql:mysql /usr/local/mysql</div><div class="line">$ cd /usr/local/mysql</div><div class="line">$ chown -R mysql:mysql .</div><div class="line">$ scripts/mysql_install_db --user=mysql</div><div class="line"># 将权限设置给root用户，并设置给mysql组， 取消其他用户的读写执行权限，</div><div class="line"># 仅留给mysql &quot;rx&quot;读执行权限，其他用户无任何权限</div><div class="line">$ chown -R root:mysql .</div><div class="line">$ chown -R mysql:mysql ./data</div><div class="line">$ chmod -R ug+rwx .</div></pre></td></tr></table></figure>
+<ul>
+<li>将mysql的配置文件拷贝到/etc</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cp support-files/my-default.cnf  /etc/my.cnf</div><div class="line"># 注意：5.6 之前如下</div><div class="line">$ cp support-files/my-medium.cnf /etc/my.cnf</div></pre></td></tr></table></figure>
+<ul>
+<li>修改my.cnf配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim /etc/my.cnf</div></pre></td></tr></table></figure>
+<p><font color="red"><code>[mysqld]</code></font> 下面添加：  </p>
+<p> user=mysql<br> datadir=/data/mysql<br> default-storage-engine=MyISAM</p>
+<ul>
+<li>启动mysql</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># 将mysql的启动服务添加到系统服务中</div><div class="line">$ cp support-files/mysql.server  /etc/init.d/mysql</div><div class="line">$ service mysql start</div></pre></td></tr></table></figure>
+<ul>
+<li>增加MySQL服务</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ chkconfig --add mysql</div></pre></td></tr></table></figure>
+<ul>
+<li>修改root用户密码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cd /usr/local/mysql56</div><div class="line">$ ./bin/mysqladmin -u root password</div><div class="line">$ service mysql restart</div></pre></td></tr></table></figure>
+<h3 id="常用基础操作"><a href="#常用基础操作" class="headerlink" title="常用基础操作"></a>常用基础操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ mysql -u root -p root</div><div class="line">-- 查看数据库</div><div class="line">show databases;</div><div class="line">-- 创建用户并允许本地用户通过密码登录</div><div class="line">create user &apos;username&apos;@&apos;localhost&apos; identified by &apos;user-password&apos;;</div><div class="line">-- 创建数据库</div><div class="line">create database schema_name;</div><div class="line">-- 不可授权给其他用户(* 表示该数据库下所有的表名)</div><div class="line">grant all privileges on schema_name.* to &apos;username&apos;@&apos;remote-ip&apos; identified by &apos;remote-user-password&apos; </div><div class="line">-- 可授权给其他用户</div><div class="line">grant all privileges on schema_name.* to &apos;username&apos;@&apos;remote-ip&apos; identified by &apos;remote-user-password&apos; with grant option;</div><div class="line">-- 刷新</div><div class="line">flush privileges;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -457,8 +544,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/08/JDK安装配置/" rel="next" title="JDK安装配置">
-                <i class="fa fa-chevron-left"></i> JDK安装配置
+              <a href="/2017/09/22/Centos7下RabbitMQ服务安装配置/" rel="next" title="Centos7下RabbitMQ服务安装配置">
+                <i class="fa fa-chevron-left"></i> Centos7下RabbitMQ服务安装配置
               </a>
             
           </div>
@@ -466,10 +553,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/13/在CentOS7上部署kubernetes1-7-HA-集群-Vagrant/" rel="prev" title="在CentOS7上部署kubernetes1.7 HA 集群(Vagrant)">
-                在CentOS7上部署kubernetes1.7 HA 集群(Vagrant) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -554,8 +637,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -618,6 +710,22 @@ var jiathis_config={
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#确认安装版本"><span class="nav-number">1.</span> <span class="nav-text">确认安装版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载原有MySQL或者Mariadb"><span class="nav-number">2.</span> <span class="nav-text">卸载原有MySQL或者Mariadb</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查找以前是否安装mariadb-libs"><span class="nav-number">2.1.</span> <span class="nav-text">查找以前是否安装mariadb-libs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卸载已经安装的mariadb-libs"><span class="nav-number">2.2.</span> <span class="nav-text">卸载已经安装的mariadb-libs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找以前是否安装MySQL"><span class="nav-number">2.3.</span> <span class="nav-text">查找以前是否安装MySQL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除之前安装的mysql"><span class="nav-number">2.4.</span> <span class="nav-text">删除之前安装的mysql</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找之前老版本mysql的目录、并且删除老版本mysql的文件和库"><span class="nav-number">2.5.</span> <span class="nav-text">查找之前老版本mysql的目录、并且删除老版本mysql的文件和库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载MySQL"><span class="nav-number">3.</span> <span class="nav-text">下载MySQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译和安装MySQL"><span class="nav-number">4.</span> <span class="nav-text">编译和安装MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装环境"><span class="nav-number">4.1.</span> <span class="nav-text">安装环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译安装"><span class="nav-number">4.2.</span> <span class="nav-text">编译安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置MySQL"><span class="nav-number">4.3.</span> <span class="nav-text">配置MySQL</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用基础操作"><span class="nav-number">5.</span> <span class="nav-text">常用基础操作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -782,9 +890,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://博客说写.我爱你/2017/09/09/悟透自己/';
-          this.page.identifier = '2017/09/09/悟透自己/';
-          this.page.title = '悟透自己';
+          this.page.url = 'http://博客说写.我爱你/2017/09/25/CentOS7源码安装mysql5-6-社区版/';
+          this.page.identifier = '2017/09/25/CentOS7源码安装mysql5-6-社区版/';
+          this.page.title = 'CentOS7源码安装mysql5.6(社区版)';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://sunbjx.disqus.com/embed.js';
