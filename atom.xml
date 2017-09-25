@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/"/>
-  <updated>2017-09-25T13:12:46.000Z</updated>
+  <updated>2017-09-25T13:59:27.000Z</updated>
   <id>http://博客说写.我爱你/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker私有仓库之Nexus3</title>
+    <link href="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/2017/09/25/docker%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93%E4%B9%8BNexus3/"/>
+    <id>http://博客说写.我爱你/2017/09/25/docker私有仓库之Nexus3/</id>
+    <published>2017-09-25T13:20:30.000Z</published>
+    <updated>2017-09-25T13:59:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="获取Nexus的docker镜像"><a href="#获取Nexus的docker镜像" class="headerlink" title="获取Nexus的docker镜像"></a>获取Nexus的docker镜像</h3><p><a href="https://store.docker.com/community/images/sonatype/nexus3" target="_blank" rel="external">Docker hub -nexus</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker pull sonatype/nexus3</div></pre></td></tr></table></figure><h3 id="容器运行Nexus"><a href="#容器运行Nexus" class="headerlink" title="容器运行Nexus"></a>容器运行Nexus</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ mkdir -p /data/nexus-data &amp;&amp; chown -R 200 /data/nexus-data</div><div class="line">$ docker run -d -p 8081-8100:8081-8100 --name nexus -v /data/nexus-data:/nexus-data sonatype/nexus3</div></pre></td></tr></table></figure><h4 id="创建docker私有仓库"><a href="#创建docker私有仓库" class="headerlink" title="创建docker私有仓库"></a>创建docker私有仓库</h4><ul><li>默认账户 <code>admin</code> 密码 <code>admin123</code>，登录如下</li></ul><p><img src="/2017/09/25/docker私有仓库之Nexus3/nexus_index.jpg" alt=""></p><ul><li>在设置 <code>Repositories</code> 选项卡中中选择 <code>Create repository</code></li></ul><p><img src="/2017/09/25/docker私有仓库之Nexus3/nexus_docker.jpg" alt=""></p><ul><li>选择hosted</li></ul><p><img src="/2017/09/25/docker私有仓库之Nexus3/docker_type.jpg" alt=""></p><p><code>hosted</code>: 本地存储，即同 docker 官方仓库一样提供本地私服功能</p><p><code>proxy</code>: 提供代理其他仓库的类型，如 docker 中央仓库</p><p><code>group</code>: 组类型，实质作用是组合多个仓库为一个地址</p><ul><li>选择 hosted 类型仓库，然后输入一个仓库名，并勾选 HTTP 选项，端口任意即可</li></ul><p><img src="/2017/09/25/docker私有仓库之Nexus3/docker_cfg.png" alt=""></p><h3 id="测试私服"><a href="#测试私服" class="headerlink" title="测试私服"></a>测试私服</h3><ul><li>测试 push 和 pull 镜像</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">docker tag sunbjx/alpine registry.com:8082/alpine</div><div class="line">➜  ~ docker push registry.com:8082/alpine</div><div class="line">The push refers to a repository [registry.com:8082/alpine]</div><div class="line">754684812d65: Pushed</div><div class="line">60ab55d3379d: Pushed</div><div class="line">latest: digest: sha256:28f397aca53eb3e8ea1627f4af9c262fca7db17f0c6db492b53adc7bca7d0f91 size: 739</div><div class="line">➜  ~ docker rmi registry.com:8082/alpine</div><div class="line">Untagged: registry.com:8082/alpine:latest</div><div class="line">Untagged: registry.com:8082/alpine@sha256:28f397aca53eb3e8ea1627f4af9c262fca7db17f0c6db492b53adc7bca7d0f91</div><div class="line">➜  ~ docker rmi sunbjx/alpine</div><div class="line">Untagged: sunbjx/alpine:latest</div><div class="line">Untagged: sunbjx/alpine@sha256:28f397aca53eb3e8ea1627f4af9c262fca7db17f0c6db492b53adc7bca7d0f91</div><div class="line">Deleted: sha256:090c790ee6f28f495d92d5be43641573b0d1b5502b35f7662d88cdbf8d548afd</div><div class="line">Deleted: sha256:378e2b887fcdffcbd113a7cf6f97e9f8a58851b0a205b31a93acdb887912850d</div><div class="line">➜  ~ docker pull registry.com:8082/alpine</div><div class="line">Using default tag: latest</div><div class="line">latest: Pulling from alpine</div><div class="line"></div><div class="line">0a8490d0dfd3: Already exists</div><div class="line">8fb018fb4173: Pull complete</div><div class="line">Digest: sha256:28f397aca53eb3e8ea1627f4af9c262fca7db17f0c6db492b53adc7bca7d0f91</div><div class="line">Status: Downloaded newer image for registry.com:8082/alpine:latest</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;获取Nexus的docker镜像&quot;&gt;&lt;a href=&quot;#获取Nexus的docker镜像&quot; class=&quot;headerlink&quot; title=&quot;获取Nexus的docker镜像&quot;&gt;&lt;/a&gt;获取Nexus的docker镜像&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https
+      
+    
+    </summary>
+    
+      <category term="devops" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/devops/"/>
+    
+      <category term="docker" scheme="http://%E5%8D%9A%E5%AE%A2%E8%AF%B4%E5%86%99.%E6%88%91%E7%88%B1%E4%BD%A0/categories/devops/docker/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>CentOS7源码安装mysql5.6(社区版)</title>
