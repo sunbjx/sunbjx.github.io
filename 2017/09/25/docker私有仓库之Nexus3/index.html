@@ -97,21 +97,21 @@
 
 
 
-<meta name="description" content="获取Nexus的Docker镜像Docker hub -nexus 1$ docker pull sonatype/nexus3 容器运行Nexus12$ mkdir -p /data/nexus-data &amp;amp;&amp;amp; chown -R 200 /data/nexus-data$ docker run -d -p 8081-8100:8081-8100 --name nexus -v /">
+<meta name="description" content="获取Nexus的Docker镜像Docker hub -nexus 1$ docker pull sonatype/nexus3 容器运行Nexus12$ mkdir -p /data/nexus-data &amp;amp;&amp;amp; chown -R 200 /data/nexus-data$ docker run -d -p 8081-8100:8081-8100 --name nexus --re">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker私有仓库之Nexus3">
 <meta property="og:url" content="http://博客说写.我爱你/2017/09/25/docker私有仓库之Nexus3/index.html">
 <meta property="og:site_name" content="北极熊">
-<meta property="og:description" content="获取Nexus的Docker镜像Docker hub -nexus 1$ docker pull sonatype/nexus3 容器运行Nexus12$ mkdir -p /data/nexus-data &amp;amp;&amp;amp; chown -R 200 /data/nexus-data$ docker run -d -p 8081-8100:8081-8100 --name nexus -v /">
+<meta property="og:description" content="获取Nexus的Docker镜像Docker hub -nexus 1$ docker pull sonatype/nexus3 容器运行Nexus12$ mkdir -p /data/nexus-data &amp;amp;&amp;amp; chown -R 200 /data/nexus-data$ docker run -d -p 8081-8100:8081-8100 --name nexus --re">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://xn--g7qp6bzznzj6c.xn--6qq986b3xl/2017/09/25/docker私有仓库之Nexus3/nexus_index.jpg">
 <meta property="og:image" content="http://xn--g7qp6bzznzj6c.xn--6qq986b3xl/2017/09/25/docker私有仓库之Nexus3/nexus_docker.jpg">
 <meta property="og:image" content="http://xn--g7qp6bzznzj6c.xn--6qq986b3xl/2017/09/25/docker私有仓库之Nexus3/docker_type.jpg">
 <meta property="og:image" content="http://xn--g7qp6bzznzj6c.xn--6qq986b3xl/2017/09/25/docker私有仓库之Nexus3/docker_cfg.png">
-<meta property="og:updated_time" content="2017-09-25T14:03:14.000Z">
+<meta property="og:updated_time" content="2017-09-30T03:22:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker私有仓库之Nexus3">
-<meta name="twitter:description" content="获取Nexus的Docker镜像Docker hub -nexus 1$ docker pull sonatype/nexus3 容器运行Nexus12$ mkdir -p /data/nexus-data &amp;amp;&amp;amp; chown -R 200 /data/nexus-data$ docker run -d -p 8081-8100:8081-8100 --name nexus -v /">
+<meta name="twitter:description" content="获取Nexus的Docker镜像Docker hub -nexus 1$ docker pull sonatype/nexus3 容器运行Nexus12$ mkdir -p /data/nexus-data &amp;amp;&amp;amp; chown -R 200 /data/nexus-data$ docker run -d -p 8081-8100:8081-8100 --name nexus --re">
 <meta name="twitter:image" content="http://xn--g7qp6bzznzj6c.xn--6qq986b3xl/2017/09/25/docker私有仓库之Nexus3/nexus_index.jpg">
 
 
@@ -445,7 +445,7 @@
       
         <h3 id="获取Nexus的Docker镜像"><a href="#获取Nexus的Docker镜像" class="headerlink" title="获取Nexus的Docker镜像"></a>获取Nexus的Docker镜像</h3><p><a href="https://store.docker.com/community/images/sonatype/nexus3" target="_blank" rel="external"><font color="red">Docker hub -nexus</font></a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker pull sonatype/nexus3</div></pre></td></tr></table></figure>
-<h3 id="容器运行Nexus"><a href="#容器运行Nexus" class="headerlink" title="容器运行Nexus"></a>容器运行Nexus</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ mkdir -p /data/nexus-data &amp;&amp; chown -R 200 /data/nexus-data</div><div class="line">$ docker run -d -p 8081-8100:8081-8100 --name nexus -v /data/nexus-data:/nexus-data sonatype/nexus3</div></pre></td></tr></table></figure>
+<h3 id="容器运行Nexus"><a href="#容器运行Nexus" class="headerlink" title="容器运行Nexus"></a>容器运行Nexus</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ mkdir -p /data/nexus-data &amp;&amp; chown -R 200 /data/nexus-data</div><div class="line">$ docker run -d -p 8081-8100:8081-8100 --name nexus --restart=always -v /data/nexus-data:/nexus-data sonatype/nexus3</div></pre></td></tr></table></figure>
 <h4 id="创建Docker私有仓库"><a href="#创建Docker私有仓库" class="headerlink" title="创建Docker私有仓库"></a>创建Docker私有仓库</h4><ul>
 <li>默认账户 <code>admin</code> 密码 <code>admin123</code>，登录如下</li>
 </ul>
@@ -465,7 +465,13 @@
 <li>选择 hosted 类型仓库，然后输入一个仓库名，并勾选 HTTP 选项，端口任意即可</li>
 </ul>
 <p><img src="/2017/09/25/docker私有仓库之Nexus3/docker_cfg.png" alt=""></p>
+<h4 id="修改Docker参数"><a href="#修改Docker参数" class="headerlink" title="修改Docker参数"></a>修改Docker参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 增加非安全仓库</div><div class="line">vim /usr/lib/systemd/system/docker.service</div><div class="line"># 在 ExecStart 后面增加(这里改了 host，上面端口用的 8082)</div><div class="line">--insecure-registry registry.yourcompany.com:8082</div><div class="line"># 重启 docker</div><div class="line">systemctl daemon-reload</div><div class="line">systemctl restart docker</div></pre></td></tr></table></figure>
+<h4 id="修改hostname"><a href="#修改hostname" class="headerlink" title="修改hostname"></a>修改hostname</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ vim /etc/hosts</div><div class="line"># 修改／追加 你主机IP 的 hostname</div><div class="line">$ 192.168.X.X registry.yourcompany.com</div></pre></td></tr></table></figure>
 <h3 id="测试私服"><a href="#测试私服" class="headerlink" title="测试私服"></a>测试私服</h3><ul>
+<li>登录私服仓库</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker login registry.yourcompany.com:8082</div></pre></td></tr></table></figure>
+<ul>
 <li>测试 push 和 pull 镜像</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">docker tag sunbjx/alpine registry.com:8082/alpine</div><div class="line">➜  ~ docker push registry.com:8082/alpine</div><div class="line">The push refers to a repository [registry.com:8082/alpine]</div><div class="line">754684812d65: Pushed</div><div class="line">60ab55d3379d: Pushed</div><div class="line">latest: digest: sha256:28f397aca53eb3e8ea1627f4af9c262fca7db17f0c6db492b53adc7bca7d0f91 size: 739</div><div class="line">➜  ~ docker rmi registry.com:8082/alpine</div><div class="line">Untagged: registry.com:8082/alpine:latest</div><div class="line">Untagged: registry.com:8082/alpine@sha256:28f397aca53eb3e8ea1627f4af9c262fca7db17f0c6db492b53adc7bca7d0f91</div><div class="line">➜  ~ docker rmi sunbjx/alpine</div><div class="line">Untagged: sunbjx/alpine:latest</div><div class="line">Untagged: sunbjx/alpine@sha256:28f397aca53eb3e8ea1627f4af9c262fca7db17f0c6db492b53adc7bca7d0f91</div><div class="line">Deleted: sha256:090c790ee6f28f495d92d5be43641573b0d1b5502b35f7662d88cdbf8d548afd</div><div class="line">Deleted: sha256:378e2b887fcdffcbd113a7cf6f97e9f8a58851b0a205b31a93acdb887912850d</div><div class="line">➜  ~ docker pull registry.com:8082/alpine</div><div class="line">Using default tag: latest</div><div class="line">latest: Pulling from alpine</div><div class="line"></div><div class="line">0a8490d0dfd3: Already exists</div><div class="line">8fb018fb4173: Pull complete</div><div class="line">Digest: sha256:28f397aca53eb3e8ea1627f4af9c262fca7db17f0c6db492b53adc7bca7d0f91</div><div class="line">Status: Downloaded newer image for registry.com:8082/alpine:latest</div></pre></td></tr></table></figure>
@@ -673,7 +679,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取Nexus的Docker镜像"><span class="nav-number">1.</span> <span class="nav-text">获取Nexus的Docker镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器运行Nexus"><span class="nav-number">2.</span> <span class="nav-text">容器运行Nexus</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建Docker私有仓库"><span class="nav-number">2.1.</span> <span class="nav-text">创建Docker私有仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试私服"><span class="nav-number">3.</span> <span class="nav-text">测试私服</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取Nexus的Docker镜像"><span class="nav-number">1.</span> <span class="nav-text">获取Nexus的Docker镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器运行Nexus"><span class="nav-number">2.</span> <span class="nav-text">容器运行Nexus</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建Docker私有仓库"><span class="nav-number">2.1.</span> <span class="nav-text">创建Docker私有仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改Docker参数"><span class="nav-number">2.2.</span> <span class="nav-text">修改Docker参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改hostname"><span class="nav-number">2.3.</span> <span class="nav-text">修改hostname</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试私服"><span class="nav-number">3.</span> <span class="nav-text">测试私服</span></a></li></ol></div>
             
 
           </div>
