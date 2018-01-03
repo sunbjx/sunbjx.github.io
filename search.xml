@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu网络管理]]></title>
+    <url>%2F2018%2F01%2F03%2FUbuntu%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%2F</url>
+    <content type="text"><![CDATA[网络重启1$ sudo service network-manager restart 网络管理Linux里面有两套管理网络连接的方案： /etc/network/interfaces也就是/etc/init.d/networking Network_Manager 这两套方案冲突，不能并存。第一个方案适用于没有X的环境，如：服务器；或者那些完全不需要改动连接的场合。第二套方案使用于有桌面的环境，特别是笔记本，搬来搬去，网络连接情况随时会变的。 实例 局域网设置固定IP达到局域网互联，同时连接无线网络达到外网访问。 12345678910111213141516171819$ sudo vim /etc/network/interfaces# 添加内容：auto eth0iface eth0 inet staticaddress 192.168.1.100 netmask 255.255.255.0gateway 192.168.2.1# 方案一： 网卡的配置文件里面加dns-nameservers xxx.xxx.xxx.xxx之类信息dns-nameserver 192.168.2.1# 方案二：修改 resolvconf服务的配置文件$ sudo vim /etc/resolvconf/resolv.conf.d/head(或者base）# 加入所需的域名服务器nameserver xxx.xxx.xxx.xxx$ resolvconf -u 123$ sudo vim /etc/NetworkManager/NetworkManager.conf将 managed=false 改成true 交给NM托管 执行重启网络命令后，在Wi-Fi图标处切换网络类型就好。 注：eth0 是你的网卡名称，通过 ifconfig 查看如果是在 /etc/resolv.conf 添加 DNS，由于Ubuntu 有一个 esolvconf 服务，如果重启它，那么 /etc/resolv.conf 的内容会被修改成默认的样子.默认 /etc/NetworkManager/NetworkManager.conf 里面 managed 是 false。所以会显示未托管。]]></content>
+      <categories>
+        <category>devops</category>
+        <category>Ubuntu</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Docker部署Jenkins]]></title>
     <url>%2F2017%2F10%2F12%2FDocker%E9%83%A8%E7%BD%B2Jenkins%2F</url>
     <content type="text"><![CDATA[自定义Dockerfile注意我们可不能pull下来直接用！因为jenkins默认要使用两个端口：8080和50000，而8080这个端口可能被其它占用 我们也不必把Jenkins的Dockerfile下下来自己改。别忘了Docker的镜像是分层存储的，我们只要在Jenkins上继续搭建一个Dockerfile就可以了。自己生成一个Dockerfile，内容： 1234567FROM jenkins/jenkins:ltsMAINTAINER sunbjx &lt;icebear-bjx@outlook.com&gt; ENV JENKINS_OPTS --httpPort=9527EXPOSE 9527:9527EXPOSE 50000:50000 注意 这里ENV JENKINS_OPTS –httpPort=9527是给Jenkins传的参数。如果docker -p 9527:8080，那么之后Jenkins页面上的连接都会指向JENKINS:8080，Web内链就损坏了。必须用ENV告诉Jenkins端口换成9527了 执行如下命令 1$ docker build -t &apos;jenkins-sunbjx&apos; . 系统就会制作一个属于我们自己的，端口为9527的jenkins。 运行自定义生成的镜像 jenkins-sunbjx1234567891011docker run -d \-p 9527:9527 \-p 50000:50000 \--name jenkins \--restart always \--link gitlab:gitlab.sunbjx.com \-u root \-v /var/jenkins_home:/var/jenkins_home \-v /opt/apache-maven-3.5.0:/usr/local/maven \-v /usr/lib/jdk1.8.0_141:/usr/local/jdk \jenkins-sunbjx 说明 9527 端口是jenkins的端口，5000端口是master和slave通信端口（没错，jenkins可以部署集群,在本次中没有配置） 将宿主机maven和jdk映射到对应的容器目录上，同时通过配置–link连接gitlab，因为要从gitlab下代码。 初次启动的时候，可以通过$ docker logs -f jenkins查看控制台的密码，通过这个密码登录系统，执行创建用户等操作]]></content>
