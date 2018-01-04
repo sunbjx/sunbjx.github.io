@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="北极熊">
 <meta property="og:description" content="ubuntu1、解压文件并修改文件名 1sudo tar zxvf jdk-7u21-linux-i586.tar.gz -C /usr/lib/ 进入到安装目录中 1cd /usr/lib/ 修改文件名 1sudo mv jdk1.7.0_21 java 2、添加环境变量使用vim ~/.bashrc命令编辑 1234export JAVA_HOME=/usr/lib/javaexport JR">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-08T16:52:31.000Z">
+<meta property="og:updated_time" content="2018-01-04T14:52:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDK安装配置">
 <meta name="twitter:description" content="ubuntu1、解压文件并修改文件名 1sudo tar zxvf jdk-7u21-linux-i586.tar.gz -C /usr/lib/ 进入到安装目录中 1cd /usr/lib/ 修改文件名 1sudo mv jdk1.7.0_21 java 2、添加环境变量使用vim ~/.bashrc命令编辑 1234export JAVA_HOME=/usr/lib/javaexport JR">
@@ -448,6 +448,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">export JAVA_HOME=/usr/lib/java</div><div class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</div><div class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</div><div class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</div></pre></td></tr></table></figure>
 <p>3、激活环境变量</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc</div></pre></td></tr></table></figure>
+<p>4、告诉ubuntu系统，我们使用的sun的JDK，而非OpenJDK了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_20/bin/java 300</div><div class="line">$ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_20/bin/javac 300</div><div class="line">$ sudo update-alternatives --config java</div></pre></td></tr></table></figure>
+<p>如果最后一步没有显示你有多个jdk，那么就无视他。到此结束配置。如果有请看下一步。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ sudo update-alternatives --config java</div><div class="line">有 2 个候选项可用于替换 java (提供 /usr/bin/java)。选择    路径                                      </div><div class="line">优先级  状态------------------------------------------------------------* 0      </div><div class="line">/usr/lib/jvm/java-6-openjdk/jre/bin/java   1061   自动模式  1      </div><div class="line">/usr/lib/jvm/java-6-openjdk/jre/bin/java   1061   手动模式  2      </div><div class="line">/usr/lib/jvm/jdk1.8.0_05/bin/java          300    手动模式</div></pre></td></tr></table></figure></p>
+<p>要维持当前值[*]请按回车键，或者键入选择的编号：？你想用那个输那个。<br>如上所示，这样就设置好了要使用的java了。</p>
 <h3 id="centos"><a href="#centos" class="headerlink" title="centos"></a><font color="red">centos</font></h3><p>1、查看JDK信息</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qa | grep java</div></pre></td></tr></table></figure>
 <p>2、卸载OpenJDK——在 步骤 1中 复制所有的 openjdk卸载</p>
